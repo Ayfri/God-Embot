@@ -10,7 +10,7 @@ GodEmbot.login(token).catch((err) => {
 
 GodEmbot.once('ready', () => {
 	console.log('Bot Ready !');
-	GodEmbot.user.setActivity('creating embeds');
+	GodEmbot.user.setActivity('creating embeds | embed.');
 });
 
 GodEmbot.on('message', async message => {
