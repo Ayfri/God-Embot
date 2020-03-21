@@ -1,7 +1,7 @@
 const {Client, MessageEmbed} = require('discord.js');
-const GodEmbot = new Client();
-const {token, example, explication} = require('statics.json');
 const toEmbed = require('godembed');
+const {token, example, explication} = require('./statics.json');
+const GodEmbot = new Client();
 const prefix = 'embed.';
 
 GodEmbot.login(token).catch((err) => {
@@ -10,6 +10,7 @@ GodEmbot.login(token).catch((err) => {
 
 GodEmbot.once('ready', () => {
 	console.log('Bot Ready !');
+	GodEmbot.user.setActivity('creating embeds');
 });
 
 GodEmbot.on('message', async message => {
