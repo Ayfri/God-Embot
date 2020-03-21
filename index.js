@@ -4,7 +4,7 @@ const GodEmbed = new Client();
 const prefix = 'embed.';
 
 
-GodEmbed.login('NjkwOTgwMzUwOTc2ODUxOTY5.XnZTpQ.UMsHq4nDoZWJy_qJjCVeDXA7Goc').catch((err) => {
+GodEmbed.login('Hi !').catch((err) => {
 	console.log(err);
 });
 
