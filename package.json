@@ -1,0 +1,16 @@
+{
+  "name": "godembot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "discord.js": "^12.0.2",
+    "godembed": "^1.0.4"
+  }
+}
