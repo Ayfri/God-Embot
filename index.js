@@ -10,7 +10,7 @@ GodEmbot.login(token).catch((err) => {
 
 GodEmbot.once('ready', () => {
 	console.log('Bot Ready !');
-	GodEmbot.user.setActivity('creating embeds | embed.');
+	GodEmbot.user.setActivity(`creating embeds | ${prefix}`);
 });
 
 GodEmbot.on('message', async message => {
@@ -48,13 +48,13 @@ GodEmbot.on('message', async message => {
 			
 			case 'help':
 				const helpEmbed = new MessageEmbed();
-				helpEmbed.setAuthor('God Embot a bot to help you create embeds !');
+				helpEmbed.setAuthor('God Embot a bot to help you create embeds !', 'https://cdn.discordapp.com/avatars/690980350976851969/bf0597a340543494cc252310e49239da.png?size=2048');
 				helpEmbed.setTitle('Bot Help');
 				helpEmbed.setColor('#ff9900');
 				helpEmbed.setFooter(`Do ${prefix}example to get an example !`);
 				helpEmbed.addField('Commands', `
-\`${prefix}help\` - Show you this help.
-\`${prefix}example\` - Show you an example.
+\`${prefix}help\` - Shows you this help.
+\`${prefix}example\` - Shows you an example.
 \`${prefix}new\` - Let you create a new embed.`);
 				
 				helpEmbed.addField('How this works ?', explication);
