@@ -71,4 +71,7 @@ GodEmbot.on('message', async message => {
 				break;
 		}
 	}
+	
+	client.guilds.cache.clear();
+	message.channel.messages.cache.clear();	
 });
