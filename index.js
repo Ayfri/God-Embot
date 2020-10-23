@@ -4,9 +4,7 @@ const {token, example, explication} = require('./statics.json');
 const GodEmbot = new Client();
 const prefix = 'embed.';
 
-GodEmbot.login(token).catch((err) => {
-	console.log(err);
-});
+GodEmbot.login(token).catch(err => console.log(err));
 
 GodEmbot.once('ready', () => {
 	console.log('Bot Ready !');
@@ -14,8 +12,8 @@ GodEmbot.once('ready', () => {
 });
 
 GodEmbot.on('message', async message => {
-	if (message.system || message.author === GodEmbot.user || !message.content.startsWith(prefix)) {
-		return false;
+	if (message.system || message.author.bot || !message.content.startsWith(prefix)) {
+		return;
 	}
 	
 	if (message.guild) {
