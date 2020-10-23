@@ -25,7 +25,7 @@ GodEmbot.on('message', async message => {
 				await message.react('❌');
 				await message.react('✍️');
 			} else {
-				await message.author.send('Hi, I\'m here to say to you that I can\'t send messages, I don\'t have the proper permission, you can say it to the owner, or an admin to help me gain missing permissions ^^\'');
+				await message.author.send("Hi, I'm here to say to you that I can't send messages, I don't have the proper permissions, you can say it to the owner, or an admin to help me gain missing permissions ^^'");
 			}
 		}
 	}
@@ -37,12 +37,9 @@ GodEmbot.on('message', async message => {
 			case 'create':
 			case 'new':
 				const {embed, errors} = toEmbed(args.slice(1).join(' '));
-				if (embed.length > 0) {
-					await message.channel.send({embed});
-				}
-				if (errors.length > 0) {
-					await message.channel.send(`\`\`\`js\n${errors.join('\n')}\`\`\``);
-				}
+
+				if (embed.length > 0) await message.channel.send({embed});
+				if (errors.length > 0) await message.channel.send(`\`\`\`js\n${errors.join('\n')}\`\`\``);
 				
 				break;
 			
@@ -57,7 +54,7 @@ GodEmbot.on('message', async message => {
 \`${prefix}example\` - Shows you an example.
 \`${prefix}new\` - Let you create a new embed.`);
 				
-				helpEmbed.addField('How this works ?', explication);
+				helpEmbed.addField('How does it work ?', explication);
 				
 				await message.channel.send(helpEmbed);
 				break;
